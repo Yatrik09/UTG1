@@ -1,0 +1,153 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #eaf8e6; /* Light green for a fresh outdoor feel */
+  color: #2c3e50;
+}
+
+/* Intro Section */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 10%;
+  background-color: #a8df8e; /* Soft green */
+}
+
+.intro-text h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #264653; /* Deep forest green */
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  color: #344e41; /* Earthy green */
+}
+
+.intro-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Posts Section */
+.blog-posts {
+  padding: 50px 10%;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #264653; /* Deep forest green */
+}
+
+.post-card {
+  display: flex;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.post-card img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-info {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.post-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #264653; /* Deep green */
+}
+
+.post-info p {
+  font-size: 1.1rem;
+  color: #4f772d; /* Nature-inspired darker green */
+}
+
+button.read-more {
+  background-color: #2a9d8f; /* Teal green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.read-more:hover {
+  background-color: #1e7a70;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #264653; /* Deep forest green */
+  color: white;
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.testimonial-card {
+  background-color: #2a9d8f;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #eaf8e6;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .intro {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .intro-text {
+      margin-bottom: 20px;
+  }
+
+  .post-card {
+      flex-direction: column;
+  }
+
+  .post-card img {
+      width: 100%;
+      height: 200px;
+  }
+
+  .post-info {
+      padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 2rem;
+  }
+
+  .intro-text h2 {
+      font-size: 2rem;
+  }
+
+  .post-info h3 {
+      font-size: 1.4rem;
+  }
+
+  .post-info p {
+      font-size: 1rem;
+  }
+}

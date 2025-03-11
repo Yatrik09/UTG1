@@ -1,0 +1,32 @@
+/* nav bar profie*/
+.dropdown-menu { 
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #ddd;
+    
+  }
+
+  .profile{
+    color: blue;
+    border : none
+  }
+/* profile end  */
+

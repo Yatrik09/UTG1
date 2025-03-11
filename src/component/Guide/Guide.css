@@ -1,0 +1,111 @@
+.guide-page {
+    background: #2F4F4F;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.guide-container {
+    background: rgba(245, 222, 179, 0.85);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 1000px;
+    margin: auto;
+    color: #2F4F4F;
+}
+
+.guide-card {
+    display: flex;
+    align-items: center;
+    background: rgba(245, 222, 179, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 25px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    height: 250px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s ease-out forwards;
+}
+
+.guide-card:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.guide-card img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+    width: 250px;
+}
+
+.guide-content {
+    padding: 20px;
+    color: #2F4F4F;
+    text-align: left;
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.star {
+    color: gray;
+    transition: color 0.2s;
+}
+
+.star.filled {
+    color: gold;
+}
+
+.guide-btn {
+    background-color: #FFC107;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #2F4F4F;
+    font-weight: bold;
+}
+
+.guide-btn:hover {
+    background-color: #D4A007;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .guide-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .guide-card img {
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
