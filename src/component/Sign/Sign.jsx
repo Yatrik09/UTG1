@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { postData } from "./server";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import styles from "./Sign.module.css";
+import styles from "./Sign.module.css"; // ✅ Make sure this CSS file exists
 
 function Sign() {
   const navigate = useNavigate();
@@ -35,7 +35,9 @@ function Sign() {
       await postData(formData);
       setFormData({ firstname: "", lastname: "", mobile: "", email: "", password: "" });
       toast.success("User added successfully!");
-      navigate("/");
+
+      // ✅ Redirect to Login Page after successful signup
+      navigate("/login");  
     } catch (error) {
       toast.error(error.response?.data?.message || "Failed to add user.");
     }
@@ -46,18 +48,17 @@ function Sign() {
   }
 
   return (
-    <div>
-      <div className="row">
-        <div className="col-5 m-auto">
-          <form onSubmit={handleSubmit}>
-            <input type="text" className="form-control mb-3" placeholder="Firstname" name="firstname" value={formData.firstname} onChange={handleChange} />
-            <input type="text" className="form-control mb-3" placeholder="Lastname" name="lastname" value={formData.lastname} onChange={handleChange} />
-            <input type="text" className="form-control mb-3" placeholder="Mobile No" name="mobile" value={formData.mobile} onChange={handleChange} />
-            <input type="email" className="form-control mb-3" placeholder="Email" name="email" value={formData.email} onChange={handleChange} />
-            <input type="password" className="form-control mb-3" placeholder="Password" name="password" value={formData.password} onChange={handleChange} />
-            <button type="submit" className="btn btn-success">Submit</button>
-          </form>
-        </div>
+    <div className={styles["sign-container"]}>
+      <div className={styles["sign-box"]}>
+        <h2>Sign Up</h2>
+        <form onSubmit={handleSubmit}>
+          <input type="text" placeholder="Firstname" name="firstname" value={formData.firstname} onChange={handleChange} />
+          <input type="text" placeholder="Lastname" name="lastname" value={formData.lastname} onChange={handleChange} />
+          <input type="text" placeholder="Mobile No" name="mobile" value={formData.mobile} onChange={handleChange} />
+          <input type="email" placeholder="Email" name="email" value={formData.email} onChange={handleChange} />
+          <input type="password" placeholder="Password" name="password" value={formData.password} onChange={handleChange} />
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </div>
   );

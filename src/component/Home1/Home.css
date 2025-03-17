@@ -30,6 +30,7 @@ h2 {
 
 .card1 {
   height: auto; /* Fixes the issue */
+  justify-items: left;
 }
 
 .card img {
@@ -43,6 +44,7 @@ h2 {
   background-color: #FFC107 !important; /* Golden Yellow */
   border-color: #FFC107 !important;
   color: #333 !important;
+  
 }
 
 .btn-primary:hover {

@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../Images/logo.jpg";  // ✅ Correctly imported
 
 const Navbar = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const profileRef = useRef(null);
-  const location = useLocation(); // Get current route
+  const location = useLocation();
 
-  // Don't render Navbar on Login or Sign-in pages
   if (location.pathname === "/login" || location.pathname === "/sign-in") {
     return null;
   }
@@ -36,9 +36,11 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <Link className="nav-logo logo" to="">
-          <img src=" guide/src/component/Images/logo.jpg" alt="Bootstrap" width="50" height="50" />
+        {/* ✅ Corrected logo path */}
+        <Link className="nav-logo logo" to="/">
+          <img src={logo} alt="Website Logo" width="50" height="50" />
         </Link>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -63,7 +65,6 @@ const Navbar = () => {
                 Blog
               </Link>
             </li>
-
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown">
                 About Us
@@ -73,7 +74,6 @@ const Navbar = () => {
                 <li><Link className="dropdown-item" to="/team">Core Team</Link></li>
               </ul>
             </li>
-
             <li className="nav-item">
               <Link className="nav-link" to="/contact">
                 Contact Us

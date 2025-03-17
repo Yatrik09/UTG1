@@ -1,5 +1,11 @@
 import React from "react";
 import "./Team.css";
+// Import images
+import yatrikImg from "../../Images/yatrik.jpg";
+import omImg from "../../Images/om.jpg";
+import vardanImg from "../../Images/vardan.jpg";
+import pradipImg from "../../Images/pradip.jpg";
+  
 
 const Team = () => {
   return (
@@ -54,10 +60,11 @@ const Team = () => {
   );
 };
 
+// ✅ Use the imported images instead of incorrect paths
 const teamMembers = [
   {
     name: "Yatrik Patel",
-    image: "./Image/om.jpg",
+    image: yatrikImg,
     description1:
       "A visionary in web development, Yatrik Patel is the driving force behind Your Website Name. With a strong background in MERN stack development, UI/UX strategies, and project management, he ensures our platform's seamless functionality.",
     description2:
@@ -65,7 +72,7 @@ const teamMembers = [
   },
   {
     name: "Om Patel",
-    image: "/IMG/om.jpg",
+    image: omImg,
     description1:
       "A master of server-side technologies, Om Patel specializes in designing robust APIs and optimizing databases to ensure security and performance.",
     description2:
@@ -73,7 +80,7 @@ const teamMembers = [
   },
   {
     name: "Vardan Pitroda",
-    image: "/IMG/vardan.jpg",
+    image: vardanImg,
     description1:
       "A detail-oriented backend developer, Vardan ensures efficient API integration, database design, and system logic for a scalable platform.",
     description2:
@@ -81,7 +88,7 @@ const teamMembers = [
   },
   {
     name: "Pradip Vaghela",
-    image: "/IMG/pradip.jpg",
+    image: pradipImg,
     description1:
       "A UI/UX specialist, Pradip crafts intuitive and aesthetically pleasing designs that enhance the user experience.",
     description2:

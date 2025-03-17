@@ -26,7 +26,7 @@ function Layout() {
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Team />} />
         <Route path="/guide" element={<Guide />} />
-        <Route path="/city/:cityId" element={<City />} />
+        <Route path="/city" element={<City />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign" element={<Sign />} />
       </Routes>

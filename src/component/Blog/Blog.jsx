@@ -44,7 +44,7 @@ const Blog= () => {
           <p>Explore exciting travel destinations, project updates, and travel tips to make your adventures unforgettable.</p>
         </div>
         <div className="intro-image">
-          <img src="https://via.placeholder.com/600x400" alt="Ultimate Tour Guide" />
+          <img src="guide/src/component/Images/logo.jpg" alt="Ultimate Tour Guide" />
         </div>
       </section>
 

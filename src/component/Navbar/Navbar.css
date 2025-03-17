@@ -1,5 +1,26 @@
-/* nav bar profie*/
-.dropdown-menu { 
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Apply custom font to the entire navbar */
+.navbar {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 16px; /* Increased font size */
+}
+
+/* Navbar links styling */
+.navbar-nav .nav-link {
+    font-weight: 600;
+    font-size: 16px !important; /* Increased font size */
+    color: #333 !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+}
+
+/* Fix for Bootstrap Dropdown font */
+.dropdown-menu {
     display: none;
     position: absolute;
     top: 30px;
@@ -9,24 +30,41 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 10px;
     border-radius: 5px;
-  }
-  
-  .dropdown-menu a {
-    color: #333;
+    font-family: 'Poppins', sans-serif !important;
+
+}
+
+/* Dropdown links */
+.dropdown-menu a {
+    color: #333 !important;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 8px 12px;
     display: block;
-    
-  }
-  
-  .dropdown-menu a:hover {
-    background-color: #ddd;
-    
-  }
+    font-weight: 500;
+    font-size: 18px !important; /* Increased font size */
+}
 
-  .profile{
-    color: blue;
-    border : none
-  }
-/* profile end  */
+.dropdown-menu a:hover {
+    background-color: #ddd !important;
+}
 
+/* Profile icon */
+.profile {
+    color: blue !important;
+    border: none;
+    font-size: 20px !important; /* Increased font size */
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Style for the search input */
+.form-control {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 16px !important; /* Increased font size */
+}
+
+/* Button Styling */
+.btn-outline-success {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600;
+    font-size: 18px !important; /* Increased font size */
+}

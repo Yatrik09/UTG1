@@ -1,66 +1,63 @@
-Sign Page Styling
 .sign-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #2F4F4F, #F5DEB3);
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #2F4F4F, #F5DEB3);
+}
+
+.sign-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.sign-box h2 {
+  font-size: 24px;
+  color: #2F4F4F;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.sign-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.sign-box input:focus {
+  border-color: #2F4F4F;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(47, 79, 79, 0.3);
+}
+
+.sign-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2F4F4F;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.sign-box button:hover {
+  background-color: #1d3a3a;
+}
+
+@media (max-width: 480px) {
   .sign-box {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    margin-top: 100px;
+    width: 90%;
+    padding: 20px;
   }
-  
-  .sign-box h2 {
-    font-size: 24px;
-    color: #2F4F4F;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
-  
-  .sign-box input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .sign-box input:focus {
-    border-color: #2F4F4F;
-    outline: none;
-    box-shadow: 0px 0px 8px rgba(47, 79, 79, 0.3);
-  }
-  
-  .sign-box button {
-    width: 100%;
-    padding: 12px;
-    background-color: #2F4F4F;
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-  }
-  
-  .sign-box button:hover {
-    background-color: #1d3a3a;
-  }
-  
-  @media (max-width: 480px) {
-    .sign-box {
-      width: 90%;
-      padding: 20px;
-    }
-  }
-  
+}
