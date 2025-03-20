@@ -37,6 +37,7 @@ const Team = () => {
                 <h5 className="card-title">{member.name}</h5>
                 <p className="card-text">{member.description1}</p>
                 <p className="card-text">{member.description2}</p>
+                <p className="card-text">{member.description3}</p>
               </div>
             </div>
           </div>
@@ -66,10 +67,13 @@ const teamMembers = [
     name: "Yatrik Patel",
     image: yatrikImg,
     description1:
-      "A visionary in web development, Yatrik Patel is the driving force behind Your Website Name. With a strong background in MERN stack development, UI/UX strategies, and project management, he ensures our platform's seamless functionality.",
+      "A visionary in web development, Yatrik Patel is the driving force behind Your Website Name. With a strong background in MERN stack development, UI/UX strategies, and project management, he ensures that the platform operates seamlessly, delivering a smooth and engaging user experience.",
     description2:
-      "As the Founder and Lead Developer, he guides the team towards achieving long-term goals, ensuring every aspect of development is built to perfection.",
-  },
+      "As the Founder and Lead Developer, Yatrik not only oversees technical execution but also plays a crucial role in innovation, problem-solving, and strategic planning. His expertise in scalable web applications and front-end optimization ensures that the website remains robust, efficient, and future-ready.",
+    description3 :
+    "His leadership fosters innovation and collaboration, driving the team to create a seamless, user-centric platform. With a keen eye for detail and a commitment to excellence, he strives to set new industry standards.",
+  
+    },
   {
     name: "Om Patel",
     image: omImg,

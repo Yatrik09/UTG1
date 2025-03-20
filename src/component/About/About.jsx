@@ -13,11 +13,16 @@ const teamMembers = [
   { name: "Yatrik Patel", role: "Founder & Lead Developer", img: yatrikImg },
   { name: "Om Patel", role: "Backend Specialist", img: omImg },
   { name: "Vardan Pitroda", role: "Backend Developer", img: vardanImg },
-  { name: "Pradip Vaghela", role: "UI/UX Designer", img: pradipImg }
+  { name: "Pradip Vaghela", role: "UI/UX Designer", img: pradipImg },
 ];
 
 const About = () => {
-  const [stats, setStats] = useState({ travelers: 0, places: 0, guides: 0, cities: 0 });
+  const [stats, setStats] = useState({
+    travelers: 0,
+    places: 0,
+    guides: 0,
+    cities: 0,
+  });
 
   useEffect(() => {
     const targetStats = { travelers: 750, places: 248, guides: 55, cities: 45 };
@@ -37,20 +42,41 @@ const About = () => {
       {/* About Section */}
       <section id="about">
         <h2>About Us</h2>
-        <p>Welcome to <strong>Ultimate Tour Guide</strong>, your dedicated travel companion that connects travelers
-          with experienced guides to explore breathtaking destinations.</p>
+        <p>
+          Welcome to<strong>Ultimate Tour Guide</strong>, your trusted travel
+          companion that connects travelers with experienced local guides. We
+          help you explore breathtaking destinations with personalized tours,
+          hidden gems, and authentic experiences beyond the usual tourist spots.
+          Whether you're looking for adventure, culture, or relaxation, our
+          platform makes it easy to find and book knowledgeable guides for a
+          hassle-free journey. Let’s make your travels unforgettable! 🌍✨
+        </p>
       </section>
 
       {/* Goal Section */}
       <section id="goal">
         <h2>Our Goal</h2>
-        <p>We aim to make travel seamless and enjoyable by offering expert guidance, insider travel tips, and a platform where travelers can find the perfect guide.</p>
+        <p>
+          We strive to make every journey seamless and enjoyable by providing
+          expert guidance, insider travel tips, and a platform where travelers
+          can effortlessly connect with the perfect guide. Whether you're
+          seeking local insights, personalized experiences, or hassle-free trip
+          planning, Ultimate Tour Guide ensures you have the best travel
+          companion for an unforgettable adventure.
+        </p>
       </section>
 
       {/* What We Offer Section */}
       <section id="description">
         <h2>What We Offer</h2>
-        <p>From historical sites to adventure-packed destinations, <strong>Ultimate Tour Guide</strong> provides expert recommendations and guide-booking services.</p>
+        <p>
+          From historical landmarks to thrilling adventures,
+          <strong>Ultimate Tour Guide</strong> connects travelers with expert
+          guides, offering personalized recommendations and seamless booking
+          services. Whether you’re exploring hidden gems, indulging in local
+          cuisine, or embarking on outdoor escapades, we ensure every journey is
+          immersive, insightful, and unforgettable.
+        </p>
       </section>
 
       {/* Meet Our Team */}
@@ -60,7 +86,9 @@ const About = () => {
           {teamMembers.map((member, index) => (
             <div key={index} className="team-member">
               <img src={member.img} alt={member.name} />
-              <p>{member.name} - {member.role}</p>
+              <p>
+                {member.name} - {member.role}
+              </p>
             </div>
           ))}
         </div>

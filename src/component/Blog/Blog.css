@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #eaf8e6; /* Light green for a fresh outdoor feel */
-  color: #2c3e50;
+  background-color: #F9F9F9; /* Soft Light Gray */
+  color: #2D2D2D; /* Deep Charcoal for Readability */
 }
 
 /* Intro Section */
@@ -16,18 +16,18 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 50px 10%;
-  background-color: #a8df8e; /* Soft green */
+  background-color: #F2E9E4; /* Warm Beige */
 }
 
 .intro-text h2 {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #264653; /* Deep forest green */
+  color: #3D405B; /* Muted Navy Blue */
 }
 
 .intro-text p {
   font-size: 1.2rem;
-  color: #344e41; /* Earthy green */
+  color: #6D6875; /* Soft Grayish Purple */
 }
 
 .intro-image img {
@@ -45,7 +45,7 @@ body {
   font-size: 2rem;
   margin-bottom: 20px;
   font-weight: 600;
-  color: #264653; /* Deep forest green */
+  color: #3D405B; /* Muted Navy Blue */
 }
 
 .post-card {
@@ -71,42 +71,43 @@ body {
 .post-info h3 {
   font-size: 1.8rem;
   margin-bottom: 10px;
-  color: #264653; /* Deep green */
+  color: #3D405B; /* Muted Navy Blue */
 }
 
 .post-info p {
   font-size: 1.1rem;
-  color: #4f772d; /* Nature-inspired darker green */
+  color: #6D6875; /* Grayish Purple */
 }
 
 button.read-more {
-  background-color: #2a9d8f; /* Teal green */
+  background-color: #E07A5F; /* Soft Coral for Buttons */
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 button.read-more:hover {
-  background-color: #1e7a70;
+  background-color: #D67A5F; /* Slightly Darker Coral */
 }
 
 /* Testimonials Section */
 .testimonials {
-  background-color: #264653; /* Deep forest green */
-  color: white;
+  background-color: #F2E9E4; /* Warm Beige */
+  color: #2D2D2D;
   padding: 50px 10%;
   text-align: center;
 }
 
 .testimonial-card {
-  background-color: #2a9d8f;
+  background-color: #81B29A; /* Soft Greenish Teal */
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
   font-style: italic;
-  color: #eaf8e6;
+  color: white;
 }
 
 /* Media Queries */
@@ -135,10 +136,6 @@ button.read-more:hover {
 }
 
 @media (max-width: 480px) {
-  header h1 {
-      font-size: 2rem;
-  }
-
   .intro-text h2 {
       font-size: 2rem;
   }

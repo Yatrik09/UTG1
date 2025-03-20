@@ -1,46 +1,42 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Guide.css";
 
 const guides = [
   {
     id: 1,
-    name: "Eiffel Tower",
+    name: "Gujarat Tourism",
     description: "A famous landmark in Paris, France.",
     phone: "6354158391",
     imgSrc: "/img/eiffel.jpg",
-    link: "https://www.toureiffel.paris/en",
+    link: "https://www.gujarattourism.com/registered-tourist-guide.html",
+    rating: 4.5,
   },
   {
     id: 2,
-    name: "Statue of Liberty",
+    name: "Gujarat Tour Guide",
     description: "A symbol of freedom in the USA.",
     phone: "9876543210",
     imgSrc: "/img/liberty.jpg",
-    link: "https://www.nps.gov/stli/index.htm",
+    link: "https://www.gujarattourguide.in/",
+    rating: 3.8,
   },
   {
     id: 3,
-    name: "Great Wall of China",
+    name: "Ahmedabad Tour Guide",
     description: "One of the greatest wonders of the world.",
     phone: "6549873210",
     imgSrc: "/img/greatwall.jpg",
-    link: "https://www.travelchinaguide.com/china_great_wall/",
+    link: "https://www.tourhq.com/india/ahmedabad/tour-guides",
+    rating: 4.9,
   },
   {
     id: 4,
-    name: "Taj Mahal",
+    name: "Show Round Guide",
     description: "A symbol of love in India.",
     phone: "8796541230",
     imgSrc: "/img/tajmahal.jpg",
-    link: "https://www.tajmahal.gov.in/",
-  },
-  {
-    id: 5,
-    name: "Machu Picchu",
-    description: "An ancient Incan city in Peru.",
-    phone: "7418529630",
-    imgSrc: "/img/machu.jpg",
-    link: "https://www.peru.travel/en/what-to-do/machu-picchu",
+    link: "https://www.showaround.com/locals/india/gujarat",
+    rating: 4.2,
   },
 ];
 
@@ -60,14 +56,6 @@ const Guide = () => {
 };
 
 const GuideCard = ({ guide }) => {
-  const [rating, setRating] = useState(0);
-  const [ratings, setRatings] = useState([]);
-
-  const handleRating = (star) => {
-    setRating(star);
-    setRatings([...ratings, star]);
-  };
-
   return (
     <div className="guide-card">
       <img src={guide.imgSrc} alt={guide.name} />
@@ -75,23 +63,36 @@ const GuideCard = ({ guide }) => {
         <h4>{guide.name}</h4>
         <p>{guide.description}</p>
         <a href={`tel:${guide.phone}`}>{guide.phone}</a>
+
+        {/* Rating Section */}
         <div className="rating">
-          {[1, 2, 3, 4, 5].map((star) => (
-            <span
-              key={star}
-              className={`star ${star <= rating ? "filled" : ""}`}
-              onClick={() => handleRating(star)}
-            >
-              ★
-            </span>
-          ))}
+          {renderStars(guide.rating)}
+          <span className="rating-number">({guide.rating.toFixed(1)})</span>
         </div>
+
         <a href={guide.link} className="guide-btn" target="_blank" rel="noopener noreferrer">
           Visit
         </a>
       </div>
     </div>
   );
+};
+
+// Function to Render Stars with Correct Half-Star Support
+const renderStars = (rating) => {
+  const roundedRating = Math.round(rating * 2) / 2; // Round to nearest 0.5
+  const stars = [];
+
+  for (let i = 1; i <= 5; i++) {
+    if (i <= Math.floor(roundedRating)) {
+      stars.push(<span key={i} className="star filled">★</span>); // Full Star
+    } else if (i - 0.5 === roundedRating) {
+      stars.push(<span key={i} className="star half-filled">★</span>); // Half Star
+    } else {
+      stars.push(<span key={i} className="star">★</span>); // Empty Star
+    }
+  }
+  return stars;
 };
 
 export default Guide;

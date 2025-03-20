@@ -53,19 +53,49 @@
 
 .rating {
     display: flex;
+    align-items: center;
     gap: 5px;
     font-size: 1.5rem;
     margin: 10px 0;
-    cursor: pointer;
 }
 
+/* Default star color */
 .star {
     color: gray;
     transition: color 0.2s;
 }
 
+/* Fully filled stars */
 .star.filled {
     color: gold;
+}
+
+/* Half-filled star effect */
+.star.half {
+    color: gold;
+    position: relative;
+}
+
+.star.half::after {
+    content: "★";
+    color: gray;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+}
+
+/* Empty stars */
+.star.empty {
+    color: gray;
+}
+
+/* Display rating number */
+.rating-number {
+    font-size: 1.2rem;
+    margin-left: 5px;
+    font-weight: bold;
+    color: #333;
 }
 
 .guide-btn {
@@ -78,7 +108,7 @@
     display: inline-block;
     margin-top: 10px;
     text-decoration: none;
-    color: #574F2A   ;
+    color: #574F2A;
     font-weight: bold;
 }
 
