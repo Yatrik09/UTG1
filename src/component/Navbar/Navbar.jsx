@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { SignInButton, SignUpButton, UserButton, useUser } from "@clerk/clerk-react";
 import "./Navbar.css";
 import logo from "../Images/logo.jpg";
 
 const Navbar = () => {
+  const { isSignedIn } = useUser();
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(
     localStorage.getItem("isLoggedIn") === "true" // ✅ Load login state from storage
@@ -93,38 +95,27 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* ✅ Show Login & Sign-In if NOT logged in */}
-          {!isLoggedIn ? (
-            <div className="d-flex">
-              <Link to="/login" className="btn btn-primary me-2" onClick={handleLogin}>Login</Link>
-              <Link to="/sign" className="btn btn-secondary">Sign In</Link>
-            </div>
-          ) : (
-            <>
-              {/* ✅ Show Search Bar & Profile Button AFTER login */}
-              {location.pathname === "/" && (
-                <form className="d-flex">
-                  <input className="form-control me-2" type="search" placeholder="Search Your City" aria-label="Search" />
-                  <button className="btn btn-outline-success me-2" type="submit">Search</button>
-                </form>
-              )}
-
-              <div className="profile-container" ref={profileRef}>
-                <button className="profile-button profile" onClick={toggleProfileMenu}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-person-circle mt-1" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                    <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                  </svg>
-                </button>
-
-                <div className="dropdown-menu" style={{ display: isProfileOpen ? "block" : "none" }}>
-                  <Link to="/edit-profile" className="dropdown-item">Edit Profile</Link>
-                  <button className="dropdown-item" onClick={handleLogout}>Logout</button>
-                </div>
-              </div>
-            </>
-          )}
-        </div>
+          {!isSignedIn ? (
+  <div className="d-flex">
+    <SignInButton mode="modal" afterSignInUrl="/">
+      <button className="btn btn-primary me-2">Login</button>
+    </SignInButton>
+    <SignUpButton mode="modal" afterSignUpUrl="/">
+      <button className="btn btn-secondary">Sign Up</button>
+    </SignUpButton>
+  </div>
+) : (
+  <>
+    {location.pathname === "/" && (
+      <form className="d-flex">
+        <input className="form-control me-2" type="search" placeholder="Search Your City" aria-label="Search" />
+        <button className="btn btn-outline-success me-2" type="submit">Search</button>
+      </form>
+    )}
+    <UserButton afterSignOutUrl="/" />
+    
+  </>
+)}</div>
       </div>
     </nav>
   );

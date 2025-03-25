@@ -1,5 +1,20 @@
 {
   "users": [
-    
+    {
+      "id": "5401",
+      "firstname": "YATRIK",
+      "lastname": "Patel",
+      "mobile": "8128070702",
+      "email": "yatrikpatel1331@gmail.com",
+      "password": "Yatrik@90"
+    },
+    {
+      "id": "49f8",
+      "firstname": "YATRIK",
+      "lastname": "Patel",
+      "mobile": "8128070702",
+      "email": "yatrikpatel1331@gmail.com",
+      "password": "Yatrik@90"
+    }
   ]
 }

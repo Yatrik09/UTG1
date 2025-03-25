@@ -7,8 +7,7 @@ import Home from "./component/Home1/Home.jsx";
 import Footer from "./component/Footer/Footer.jsx";
 import Team from "./component/About/Team/Team.jsx";
 import City from "./component/City/City.jsx";
-import Login from "./component/Login/Login.jsx";
-import Sign from "./component/Sign/Sign.jsx";
+
 import { ToastContainer } from "react-toastify";
 import Guide from "./component/guide/guide.jsx";
 
@@ -27,8 +26,7 @@ function Layout() {
         <Route path="/team" element={<Team />} />
         <Route path="/guide" element={<Guide />} />
         <Route path="/city" element={<City />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/sign" element={<Sign />} />
+       
       </Routes>
       <ToastContainer />
       {!hideNavbarFooter && <Footer />}
